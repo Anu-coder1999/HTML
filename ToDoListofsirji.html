@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css>
+    <title>Document</title>
+    <style>
+  *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: navy;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #d1{
+            max-width: 500px;
+            background-color:white;
+            border-radius: 15px;
+            margin:120px auto 15px;
+            padding: 20px 30px 50px;
+        }
+        #fom
+        {
+            display: flex;
+        }
+        input[type="text"]
+        {
+                width:80%;
+                padding: 10px;
+                border: 4px solid #632fff;
+                font: size 1re;cursor: pointer;
+                border-radius: 15px;
+                margin-left: 20px;
+        }
+        #button{
+                border-radius: 10px;
+                background-color:#632fff;;
+                color: white;
+                padding: 8px 18px;
+                cursor: pointer;
+                border:none;
+                margin-left: 5px;
+                font-size: 25px;
+            }
+            ol li
+            {
+                padding: 10px 6px 10px 30px;
+                background-color: aliceblue;
+                border-bottom: 1px solid green;
+              
+            }
+            li button{
+                float: right;
+                font-size: 20px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                line-height: 10px;
+                cursor: pointer;
+                color: green;
+                
+            }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <h2 style="text-align: center;">ToDo List</h2><br>
+    <form action="#" id="fom"></form>
+        <input type="text" name="" id="input"autofocus placeholder="Enter Task">
+        <button id="button" onclick="fun()">+</button>
+    </form>
+</div>
+    <script>
+        function fun()
+        {
+            let inputdata=document.getElementById('input')
+            let ul=document.createElement('ol')
+            let li=document.createElement('li')
+            btndel=document.createElement('button')
+            btnedit=document.createElement('button')
+            btndone=document.createElement('button')
+            btndel.className="fa fa-trash-o";
+            btnedit.className="fa fa-edit";
+            btndone.className="fa fa-check";
+      
+            if(inputdata.value=="")
+            {
+                alert('Please Enter Your Task')
+            }
+            else{
+            li.innerHTML=inputdata.value
+            li.appendChild(btndel)
+            li.appendChild(btnedit)
+            li.appendChild(btndone)
+            ul.appendChild(li)
+            d1.appendChild(ul)
+           }
+            inputdata.value="";
+        }
+        ul.addEventListener("click", function(event)
+            {
+                event.target.tagName == ("button")
+                event.target.parentElement.remove();
+            }) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <h1>While Loop</h1>
+    <input type="text" name="" id="input">
+    <button onclick="f1()">click here</button>
+    <!-- <input type="text" name="" id="input">
+    <button onclick="f1()">click me </button> -->
+
+    <script>
+        function f1()
+        {
+         var x=document.getElementById("input").value;
+         while(x<=5)
+         {
+            document.write("Hello Javascript<br>")
+            // if(x%2==0)
+                // break;
+            x++;
+         }
+         document.write("Value of x = "+x);
+        }
+    </script>
+</body>
+</html>

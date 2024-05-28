@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TodoApp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>ToDoApp for Students</title>
+</head>
+<body>
+    <div class="todo-app">
+        <h1>ToDo App</h1>
+        <form action="#" id="task-form">
+            <input type="text" id="task-input" placeholder="Enter new Task">
+         
+            <button class="btn" onclick="addTask()">+</button>
+        </form>
+        <ul id="tasklist">
+           <!-- <li>Task 1
+            <button><i class="fa fa-edit"></i></button>
+            <button><i class="fa fa-trash-o"></i></button>
+            <button><i class="fa fa-check"></i></button>
+        </li>
+           <li>Task 2
+            <button><i class="fa fa-edit"></i></button>
+            <button><i class="fa fa-trash-o"></i></button>
+            <button><i class="fa fa-check"></i></button>
+           </li>
+           <li>Task 3
+            <button><i class="fa fa-edit"></i></button>
+            <button><i class="fa fa-trash-o"></i></button>
+            <button><i class="fa fa-check"></i></button>
+           </li>
+           <li>Task 4
+            <button><i class="fa fa-edit"></i></button>
+            <button><i class="fa fa-trash-o"></i></button>
+            <button><i class="fa fa-check"></i></button>
+           </li>
+           <li>Task 5
+            <button><i class="fa fa-edit"></i></button>
+            <button><i class="fa fa-trash-o"></i></button>
+            <button><i class="fa fa-check"></i></button>
+           </li> -->
+        </ul>
+</div>
+<script>
+    // let inputdata=document.getElementById('task-input');
+    // let taskitem=document.getElementById('tasklist');
+    // function addTask()
+    // {
+    //     li=document.createElement('li')
+    //     btnedit=document.createElement('button');
+    //     btndel=document.createElement('button');
+    //     btncheck=document.createElement('button');
+       
+    //     btnedit.innerHTML='<i class="fa fa-edit"></i>';
+    //     btndel.innerHTML='<i class="fa fa-trash-o"></i>'
+    //     btncheck.innerHTML='<i class="fa fa-check"></i>'
+
+    //     li.innerHTML=inputdata.value;    
+    //     if(inputdata.value=='')
+    //         alert("Please Insert Any Task")
+    //     else{
+
+          
+    //     li.appendChild(btndel); 
+    //     li.appendChild(btncheck);
+    //     li.appendChild(btnedit);
+    //     console.log(li);
+    //     taskitem.appendChild(li);
+    // }
+    // inputdata.value='';  
+    // }
+
+    let inputdata=document.getElementById('task-input');
+    let ul=document.getElementById('tasklist');
+
+    function addTask()
+    {
+        let li = document.createElement('li');
+        let btnedit=document.createElement('button');
+        let btndel=document.createElement('button');
+        let btncheck=document.createElement('button');
+        btnedit.innerHTML='<i class="fa fa-edit"></i>';
+        btndel.innerHTML='<i class="fa fa-trash-o"></i>';
+        btncheck.innerHTML='<i class="fa fa-check"></i>';
+        console.log(btnedit);
+        if(inputdata.value=='')
+        alert("Please Enter Your Task");
+        else
+        {
+
+        li.innerHTML=inputdata.value;
+        li.appendChild(btnedit);
+        li.appendChild(btndel);
+        li.appendChild(btncheck);
+        ul.appendChild(li)
+        inputdata.value='';
+    }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #container{
+            width: 350px;
+            height: 450px;
+            border: 2px solid black;
+            border-radius: 3%;
+            margin: auto;
+            padding-top: 50px;
+            line-height: 50px;
+        }
+        #d1{
+            width: 60px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: aliceblue;
+            background-color: gray;
+            /* display: inline-block; */
+            margin: 10px;
+            font-size: 20px;
+        }
+        #d2{
+            width: 100px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            background-color: green;
+            display: inline-block;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <table>
+        <tr>
+            <td> Enter number:</td> <td><input type="text" name="" id="f1"><br> </td>
+    </tr>
+    <tr>
+        <td> Enter number:</td> <td><input type="text" name="" id="f2"></td>
+    </tr>
+
+    <tr>
+        <td> Result is </td> <td> <input type="text" name="" id="result" readonly></td> 
+    </tr>
+
+    <tr>
+        <td><button onclick="fun()" id="d1">+</button>
+        <button onclick="fun1()" id="d1">-</button></td>
+        <td><button onclick="fun2()" id="d1">*</button>
+        <button onclick="fun3()" id="d1">/</button></td>
+    </tr>
+
+    <tr>
+        <td><button onclick="fun4()" id="d2">=</button></td>
+        <td><button onclick="fun5()" id="d2">%</button></td>
+    </tr>
+
+   <tr>
+    <!-- Result is  <input type="text" name="" id="result"> -->
+</tr>
+</table>
+</div>
+
+    <script>
+        function fun()
+        {
+            let a=document.getElementById('f1').value;
+            let b=document.getElementById('f2').value;
+            let c=parseInt(a)+parseInt(b);
+            document.getElementById('result').value=c;
+        }
+       function fun1()
+       {
+            let a=document.getElementById('f1').value;
+            let b=document.getElementById('f2').value;
+            let c=parseInt(a)-parseInt(b);
+            document.getElementById('result').value=c;
+       }
+       function fun2()
+       {
+            let a=document.getElementById('f1').value;
+            let b=document.getElementById('f2').value;
+            let c=parseInt(a)*parseInt(b);
+            document.getElementById('result').value=c;
+       }
+       function fun3()
+       {
+            let a=document.getElementById('f1').value;
+            let b=document.getElementById('f2').value;
+            let c=parseInt(a)/parseInt(b);
+            document.getElementById('result').value=c;
+       }
+       function fun4()
+       {
+            let a=document.getElementById('f1').value;
+            let b=document.getElementById('f2').value;
+            let c=parseInt(a)=parseInt(b);
+            document.getElementById('result').value=c;
+       }
+       function fun5()
+       {
+            let a=document.getElementById('f1').value;
+            let b=document.getElementById('f2').value;
+            let c=parseInt(a)%parseInt(b);
+            document.getElementById('result').value=c;
+       }
+    </script>
+
+
+
+
+<link rel="stylesheet" href="Calculater.css">
+</head>
+<div class="calculater">
+  <h2 style="color:yellow">SONY</h2>
+  <table>
+  <input type="text" id="display">
+ 
+    <tr>
+       <button id="d1" style="background-color: blue;">AC</button>
+       <button id="d1">%</button>
+       <button id="d1">/</button>
+       <button id="d1" style="background-color: red;">DEL</button>
+    </tr>
+     <tr>
+        <button id="d1">7</button>
+        <button id="d1">8</button>
+        <button id="d1">9</button>
+        <button id="d1">*</button>
+    </tr>
+    <tr>
+      <button id="d1">4</button>
+      <button id="d1">5</button>
+      <button id="d1">6</button>
+      <button id="d1">-</button>
+    </tr>
+    <tr>
+      <button id="d1">1</button>
+      <button id="d1">2</button>
+      <button id="d1">3</button>
+      <button id="d1">+</button>
+    </tr> 
+    <tr>
+      <button id="d1">0</button>
+      <button id="d1">00</button>
+      <button id="d1">.</button>
+      <button id="d1" style="background-color: green;">=</button>
+    </tr>
+  </table>
+  </div>
+   
+   <script src="Calculater.js"></script>
+
+</body>
+</html>

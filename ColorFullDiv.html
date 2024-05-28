@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorFull page</title>
+    <STYle>
+        *{
+            margin: 0PX;
+            padding: 0PX;
+            box-sizing: border-box;
+        }
+      
+        #R1{
+            height: 30px;
+            width: 80px;
+            background-color: red;
+            border-radius: 40px;
+            margin: auto;
+            }
+        #G1{
+            height: 30px;
+            width: 80px;
+            background-color:green;
+            border-radius: 40px;
+            margin: auto;
+        }
+        #Y1{
+            height: 30px;
+            width: 80px;
+            background-color:yellow;
+            border-radius: 40px;
+            margin: auto;
+        }
+        #B1{
+            height: 30px;
+            width: 80px;
+            background-color: blue;
+            border-radius: 40px;
+            margin: auto;
+        }
+        #P1{
+            height: 30px;
+            width: 80px;
+            background-color:pink;
+            border-radius: 40px;
+            margin: auto;
+        }
+        #P2{
+            height: 30px;
+            width: 80px;
+            background-color: purple;
+            border-radius: 40px;
+            margin: auto;
+        }  #O1{
+            height: 30px;
+            width: 80px;
+            background-color:orange;
+            border-radius: 40px;
+            margin: auto;
+        }
+        #u1{
+            list-style: none;
+        }
+        #div1{
+            width: 100px;
+            height: 550px;
+            /* border: 2px solid black; */
+            float: left;
+            margin-left: 30px;
+            padding-top: 60px;
+        }
+        #div2{
+            width: 80%;
+            height: 550px;
+          border-radius: 40px;
+            float: left;
+        }
+
+    </STYle>
+</head>
+   <h1>It's my color full page</h1>
+<body style="text-align: center;" id="body">
+    <div id="div1"> <ul id="u1">
+        <li id="R1">RED</li>
+        <li id="G1">GREEN</li>
+        <li id="Y1">YELLOW</li>
+        <li id="B1">BLUE</li>
+        <li id="P1">PINK</li>
+        <li id="P2">PURPLE</li>
+        <li id="O1">ORANGE</li>
+    </ul></div>
+    <div id="div2"></div>
+    <br><br>
+    <Script>
+        let body1=document.getElementById('body')
+        let div=document.getElementById('div2')
+        let list=document.querySelectorAll('li')
+        arraydata=Array.from(list)
+        arraydata.forEach(function(color){
+                color.addEventListener('click',function(fun){               
+                if(fun.target.innerHTML=="RED")
+                {
+                    div.style.backgroundColor='red'
+                }
+                else if(fun.target.innerHTML=='GREEN')
+                {
+                    body1.style.backgroundColor='green'
+                }
+                else if(fun.target.innerHTML=='YELLOW')
+                {
+                    div.style.backgroundColor="yellow"
+                }
+                else if(fun.target.innerHTML=='BLUE')
+                {
+                    body1.style.backgroundColor='blue'
+                }
+                else if(fun.target.innerHTML=='PINK')
+                {
+                    div.style.backgroundColor='pink'
+                }
+                else if(fun.target.innerHTML=='PURPLE')
+                {
+                    body1.style.backgroundColor='purple'
+                }
+                else if(fun.target.innerHTML=='ORANGE')
+                {
+                    div.style.backgroundColor='orange'
+                }
+            })
+        })
+    </Script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            width: 350px;
+            height: 500px;
+            border: 2px solid black;
+            border-radius: 30px;
+            margin: auto;
+            padding: 30px;
+            line-height: 40px;
+
+        }
+        #d1{
+            width: 50px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: gray;
+            font-size: 20px;
+        }
+        #d2{
+            
+            width: 80px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            background-color:green;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <table>
+        <tr>
+             <td><input type="text" id="display"></td>
+        </tr>
+            
+        <tr>
+            <td>
+                <button onclick="fun()" id="d1">+</button>
+                <button onclick="fun1()" id="d1">-</button>
+            </td>
+       
+            <td>
+                <button onclick="fun2()"  id="d1">/</button>
+                <button onclick="fun3()"  id="d1">*</button>
+            </td>
+            <tr>
+            <td>
+                <button onclick="fun4()"  id="d1">%</button>
+                <button onclick="fun5()"  id="d1">=</button>
+                <button id="d1" onclick="fun6()"  id="d2">DEL</button>
+            </td>
+        </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function fun()
+    {
+        let a=document.getElementById('f1').value;
+        let b=document.getElementById('f2').value;
+        let c=parseInt(a)+parseInt(b);
+        document.getElementById('result').value=c;
+    }
+    function fun1()
+    {
+        let a=document.getElementById('f1').value;
+        let b=document.getElementById('f2').value;
+        c=parseInt(a)-parseInt(b)
+        document.getElementById('result').value=c;
+    }
+    function fun2()
+    {
+        let a=document.getElementById('f1').value;
+        let b=document.getElementById('f2').value;
+        c=parseInt(a)/parseInt(b)
+        document.getElementById('result').value=c;
+    }
+    function fun3()
+    {
+        let a=document.getElementById('f1').value;
+        let b=document.getElementById('f2').value;
+        c=parseInt(a)*parseInt(b)
+        document.getElementById('result').value=c;
+    }
+    function fun4()
+    {
+        let a=document.getElementById('f1').value;
+        let b=document.getElementById('f2').value;
+        c=parseInt(a)%parseInt(b)
+        document.getElementById('result').value=c;
+    }
+    function fun5()
+    {
+        let a=document.getElementById('f1').value;
+        let b=document.getElementById('f2').value;
+        c=parseInt(a)=parseInt(b)
+        document.getElementById('result').value=c;
+    }
+        let a=document.getElementById('f1').value;
+        let b=document.querySelectorAll('d1').value;
+    function fun6()
+    {
+        
+       let data=a.value;
+       a.value=data.substring(0,data.length-1) 
+    }
+</script>
+<script>
+    let display=document.getElementById('display');
+    let buttonarray=document.getElementById('d1');
+    console.log(buttonarray);
+    ArrayData=Array.from(buttonarray)
+
+</script>
+</html>

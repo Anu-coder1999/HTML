@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Example in Javascript</title>
+</head>
+<body>
+    <h1>Object in Javascript</h1>
+    <script>
+        //How to create Object
+    let Person = {
+            firstname:"Sumit",
+            lastname:"Raghav",
+            age:22,
+            Hobbies:['Listening to music','Playing Cricket','Car Driving'],
+            Address:{
+                    City:'Atrauli',
+                    Country:'India',
+                    pincode:'202210',
+            Favfruits:['Santra','kela','sapdi','Seb','Anar'],
+            msg:function()
+            {
+                return this.firstname+" "+this.lastname;
+            }      
+            }
+    };
+    // console.log(Person.lastname)
+    // document.write(Person);
+    //How to change value 
+    Person.firstname="Rishabh"
+    // console.log(Person.firstname)
+    //How to add new property
+    Person.email="rishabh@gmail.com"
+    // console.log(Person);
+    //How to delete object property?
+    // delete Person.lastname;
+    // console.log(Person)
+    //How to check object property?
+    // console.log('firstname' in Person);
+    //How to check all keys and value
+    // for(let key in Person)
+    //     {
+    //         console.log(key)
+    //     }    
+
+        // for(let key in Person)
+        // {
+        //     console.log(key +":"+Person[key])
+        // }      
+    // console.log(Person.Address.Favfruits[2]);
+    console.log(Person.Address.msg())
+            
+
+
+
+</script>
+</body>
+</html>

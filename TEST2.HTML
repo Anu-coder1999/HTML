@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+</head>
+<body>
+   Enter first number:= <input type="text" id="f1">
+   Enter second number:= <input type="text" id="f2">
+   <button onclick="fun()">click me</button>
+   Result here:= <input type="text" id="result"><br><br><br><br>
+   <button id="d1">add</button>
+
+
+    
+   Enter your amount:= <input type="text" id="f1"><br>
+   Enter your Rate:= <input type="text" id="f2"><br>
+  Enter your time:=  <input type="text" id="f3"><br>
+    <button onclick="fun1()">alculate Simple Intres</button><br>
+   Your Intres is:= <input type="text" id="Intrest">
+
+
+    
+
+</body>
+<script>
+    // d1.addEventListener('click',fun)
+
+
+    // function fun()
+    // {
+    //     let a=document.getElementById('f1').value;
+    //     let b=document.getElementById('f2').value;
+    //     c=parseInt(a)+parseInt(b);
+    //     document.getElementById('result').value=c
+    // }
+
+
+  
+   
+   
+
+    function fun1()
+    {
+        let a=document.getElementById('f1').value;
+        let r=document.getElementById('f2').value;
+        let t=document.getElementById('f3').value;
+        let total=((parseInt(a)*parseInt(r)*parseInt(t))/100);
+        document.getElementById('Intrest').value=total;
+    }
+
+</script>
+</html>

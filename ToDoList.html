@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement using javascript</title>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #d1{
+            width: 520px;
+            background-color: yellowgreen;
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-left: 380px;
+            text-align: left;
+            
+        }
+         input{
+                font-size: 17px;
+                cursor: pointer;
+                height: 40px;
+                width: 400px;
+                border-radius: 10px;
+                text-align:center;
+                background-color: pink;
+                border-top: 2px;
+                 outline-style:none; 
+            }
+             td
+            {
+                border-bottom: 2px solid green;
+                border-radius: 10px;
+                list-style-type:decimal;
+                height: 40px;
+                padding-left: 10px;
+                padding-top: 10px;
+                color:red;
+                min-width:496px;
+                /* overflow:scroll; */ 
+            }
+            #button{
+                border-radius: 20px;
+                background-color: green;
+                height: 40px;
+                width: 100px;
+                outline-style:none;
+                border-top: 2px;
+            }
+             td button{
+                font-size: 25px;
+                margin-bottom: 15px;
+                float: right;
+                border: none;
+                /* line-height: 10px; */
+                background-color: yellowgreen;
+                margin: 2px;
+            } 
+            table{
+                border-radius: 20px;
+            }
+            h1{
+                color: green;
+            }
+
+    </style>
+</head>
+<body style="text-align: center;">
+   
+        <h2 style="color: red;font-style: italic;">ToDo List</h2><br>
+        <input type="text" id="input"autofocus align="center" placeholder="please Enter Your Task ">
+        <button onclick="fun()" id="button">Add Task</button>
+           <div id="d1"></div>
+    <script>
+         let div=document.getElementById('d1')
+         function fun()
+            {   
+                const data=document.getElementById('input');
+                const table=document.createElement('table');
+                let tr=document.createElement('tr')
+                let td=document.createElement('td')
+                let table2=document.createElement('table')
+                let h1=document.createElement('h1')
+                h1.innerHTML="Complitad"
+                table2.appendChild(h1)
+                let del=document.createElement('button');
+                del.id="dl"
+                del.className ="fa-solid fa-trash";
+                let edit=document.createElement('button');
+                edit.id="ed"
+                edit.className="fa-regular fa-pen-to-square";
+                let done=document.createElement('button')
+                done.id="dn"
+                done.className="fa-solid fa-circle-check"
+
+                if(data.value ==='')
+                 {
+                    alert("Please Enter Your Task")
+                 }
+                //  if (value.tream()==='')
+                //  {
+                //     alert("oofff🤦‍♀️ space not allow")
+                //  }
+                else
+              {
+
+                td.innerHTML=data.value;
+                tr.appendChild(td)
+                table.appendChild(tr)
+                div.appendChild(table)         
+                td.appendChild(del)
+                td.appendChild(edit)  
+                td.appendChild(done) 
+                table2.appendChild(td)
+                div.appendChild(table2)            
+                }
+                data.value = "";
+                savedata();
+                savedata2();
+            }
+             div.addEventListener("click", function(event)
+            {
+                if(event.target.id === "dl")
+                {
+                event.target.parentElement.remove();
+                savedata();
+                }
+                else if(event.target.id==="ed")
+                {
+                    data.value=event.target.parentElement.textContent;
+                    event.target.parentElement.remove();
+                    savedata();
+                }
+                else if(event.target.id ==="dn")
+                {
+                    td=event.target.parentElement;
+                    table2.appendChild(tr);
+                    savedata();
+                    savedata2();
+                }
+            })   
+            table2.addEventListener("clicl",function(event)
+            {
+                if(event.target.id ==="dl")
+                {
+                    event.target.parentElement.remove();
+                    savedata2();
+                }
+                else if(event.target.id ==="ed")
+                {
+                    data.value=event.target.parentElement.textContent;
+                    event.target.parentElement.remove();
+                    savedata2();
+                } 
+            })
+            function savedata()
+                {
+                    localStorage.setItem("task",table.innerHTML);
+                }
+                function savedata2()
+                {
+                    localStorage.setItem("task1",table2.innerHTML);
+                }
+                function showdata2()
+                {
+                    table2.innerHTML=localStorage.getItem("task1");
+                }
+                function showdata()
+                {
+                    table.innerHTML=localStorage.getItem("task");
+                }
+                showdata();
+                showdata2();                 
+    </script>
+   </body>
+</html>

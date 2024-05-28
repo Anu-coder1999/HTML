@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Intrest</title>
+    <style>
+        ul li{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Intrest whith getmethord</h1>
+    <table>
+        <tr> 
+    <li>Enter your amount <input type="text" id="fun1"><br><br></li>
+    <li>Enter your rate <input type="text" id="fun2" ><br><br></li>
+    <li>Enter your time <input type="text" id="fun3"><br><br></li>
+    <li><button onclick="f1()" style="background-color:  green;">click me
+    </button></li><br>
+    <li>Intres is: <input type="text" id="result"></li>
+
+</table>
+    <script>
+        function  f1()
+        {
+            let a=parseInt(document.getElementById("fun1").value)
+            let b=parseInt(document.getElementById("fun2").value)
+            let c=parseInt(document.getElementById("fun3").value)
+            let d=((a*b*c)/100)
+            document.getElementById("result").value=d;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <style>
+        ul li
+        {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Javascript function</h1>  
+    <ul>
+        <li id="l1"><a href="#">HTML</a></li>
+        <li id="l2"><a href="#">CSS</a></li>
+        <li id="l3"><a href="#">JAVASCRIPT</a></li>
+        <li id="l4"><a href="#">PYTHON</a></li>
+    </ul>  
+    <P id="P1">
+
+    </P>
+    <script>
+        let a=document.getElementById('l1');
+        let b=document.getElementById('l2');
+        let c=document.getElementById('l3');
+        let d=document.getElementById('l4');
+        let p1=document.getElementById('P1');
+        
+        a.addEventListener('click',function()
+    {
+        
+        p1.innerText="Hello Html";
+    })
+    b.addEventListener('click',function()
+    {
+        
+        p1.innerText="Hello css";
+    })
+    c.addEventListener('click',function()
+    {
+        
+        p1.innerText="Hello javascript";
+    })
+    d.addEventListener('click',function()
+    {
+        
+        p1.innerText="Hello Python";
+    })
+    </script>
+</body>
+</html>
